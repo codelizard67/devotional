@@ -32,9 +32,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
     return null;
   });
-  const [loading, setLoading] = useState(true);
-  const [isAuthReady, setIsAuthReady] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isAuthReady, setIsAuthReady] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const getRedirectUrl = () => {
+    const appUrl = import.meta.env.VITE_APP_URL || import.meta.env.VITE_SITE_URL;
+    const baseUrl = appUrl || window.location.origin;
+    return `${baseUrl.replace(/\/$/, '')}/auth/callback`;
+  };
 
   const fetchProfile = async (currentUser: User) => {
     try {
@@ -64,22 +69,54 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
+    let mounted = true;
+
+    const bootstrapAuth = async () => {
+      try {
+        const { data, error } = await supabase.auth.getSession();
+        if (error) {
+          console.error("Initial session check failed:", error);
+        }
+        if (!mounted) return;
+
+        const currentUser = data.session?.user || null;
+        setUser(currentUser);
+        setIsAuthReady(true);
+        setLoading(false);
+
+        if (currentUser) {
+          fetchProfile(currentUser).catch((err) => {
+            console.error("Background profile sync failed:", err);
+          });
+        }
+      } catch (err) {
+        if (!mounted) return;
+        console.error("Auth bootstrap error:", err);
+        setIsAuthReady(true);
+        setLoading(false);
+      }
+    };
+
+    bootstrapAuth();
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       const currentUser = session?.user || null;
       console.log("Auth State Changed:", currentUser ? `User: ${currentUser.email}` : "No User");
       setUser(currentUser);
+      setLoading(false);
       setIsAuthReady(true);
       
       if (currentUser) {
-        await fetchProfile(currentUser);
-        setLoading(false);
+        fetchProfile(currentUser).catch((err) => {
+          console.error("Background profile sync failed:", err);
+        });
       } else {
         setProfile(null);
-        setLoading(false);
       }
     });
 
     return () => {
+      mounted = false;
       subscription?.unsubscribe();
     };
   }, []);
@@ -91,7 +128,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const { error: err } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: window.location.origin,
+          redirectTo: getRedirectUrl(),
         },
       });
       if (err) {
@@ -135,8 +172,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const syncProfile = async () => {
     if (user) {
       setLoading(true);
-      await fetchProfile(user);
-      setLoading(false);
+      try {
+        await fetchProfile(user);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 

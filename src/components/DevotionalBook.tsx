@@ -217,24 +217,20 @@ export default function DevotionalBook() {
 
     const loadData = async () => {
       try {
-        // Load bookmarks
-        const { data: bookmarksData } = await supabase
-          .from('bookmarks')
-          .select('devotion_id')
-          .eq('user_id', user.id);
-        
+        const [bookmarksRes, notesRes, highlightsRes] = await Promise.all([
+          supabase.from('bookmarks').select('devotion_id').eq('user_id', user.id),
+          supabase.from('notes').select('devotion_id, content').eq('user_id', user.id),
+          supabase.from('highlights').select('devotion_id, text, id, paragraph_index, color').eq('user_id', user.id)
+        ]);
+
+        const bookmarksData = bookmarksRes.data;
         if (bookmarksData) {
           const bMarks = bookmarksData.map(b => b.devotion_id);
           setBookmarks(bMarks);
           localStorage.setItem('obm_bookmarks_cache', JSON.stringify(bMarks));
         }
 
-        // Load notes
-        const { data: notesData } = await supabase
-          .from('notes')
-          .select('devotion_id, content')
-          .eq('user_id', user.id);
-        
+        const notesData = notesRes.data;
         if (notesData) {
           const notes: Record<string, string> = {};
           notesData.forEach((note) => {
@@ -244,12 +240,7 @@ export default function DevotionalBook() {
           localStorage.setItem('obm_notes_cache', JSON.stringify(notes));
         }
 
-        // Load highlights
-        const { data: highlightsData } = await supabase
-          .from('highlights')
-          .select('devotion_id, text, id, paragraph_index, color')
-          .eq('user_id', user.id);
-        
+        const highlightsData = highlightsRes.data;
         if (highlightsData) {
           const h: Record<string, Array<{ text: string, id: string, paraIndex: number, color?: string }>> = {};
           highlightsData.forEach((hl) => {

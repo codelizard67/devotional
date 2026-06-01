@@ -18,8 +18,8 @@ export default function LoginScreen() {
     const success = await registerWithCode(code);
     if (!success) {
       setError('Invalid access code. Please check your invitation.');
-      setIsSubmitting(false);
     }
+    setIsSubmitting(false);
   };
 
   const handleManualSync = async () => {
@@ -61,6 +61,14 @@ export default function LoginScreen() {
           <p className="text-stone-500 font-serif italic text-lg mb-10 leading-relaxed">
             "When God writes your story through daily devotion and reflection."
           </p>
+          <div className="mb-6 rounded-2xl border border-olive/10 bg-olive/5 px-4 py-3 text-left">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-hunter mb-1">
+              New here?
+            </p>
+            <p className="text-[11px] leading-relaxed text-stone-600">
+              Sign in with Google first, then enter your access code to unlock the devotional.
+            </p>
+          </div>
 
           <AnimatePresence mode="wait">
             {!user ? (
@@ -91,9 +99,13 @@ export default function LoginScreen() {
                     className="w-full flex items-center justify-center gap-3 bg-hunter text-white py-5 rounded-2xl font-bold hover:bg-hunter/90 transition-all shadow-lg shadow-hunter/20 group"
                   >
                     <LogIn size={20} />
-                    SIGN IN WITH GOOGLE
+                    CONTINUE WITH GOOGLE
                     <ArrowRight size={18} className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all" />
                   </button>
+
+                  <p className="text-[10px] text-stone-400 leading-relaxed px-2">
+                    Existing users: use Google sign-in. New users: sign in, then enter your invitation code on the next screen.
+                  </p>
                 </div>
                 
                 <div className="space-y-3">
@@ -178,6 +190,10 @@ export default function LoginScreen() {
                     {isSubmitting ? <Loader2 size={20} className="animate-spin" /> : <LogIn size={20} />}
                     CLAIM ACCESS
                   </button>
+
+                  <p className="text-[10px] text-stone-400 leading-relaxed px-2">
+                    This is the sign-up step. Once the code is accepted, your profile is created and you go into the devotional.
+                  </p>
                   
                   <div className="flex justify-between px-2">
                     <button 

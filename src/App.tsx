@@ -1,21 +1,27 @@
-import DevotionalBook from './components/DevotionalBook';
+import { lazy, Suspense, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import LoginScreen from './components/LoginScreen';
 
+const DevotionalBook = lazy(() => import('./components/DevotionalBook'));
+
 function Main() {
-  const { profile, isAuthReady } = useAuth();
+  const { profile } = useAuth();
+
+  useEffect(() => {
+    if (profile) {
+      import('./components/DevotionalBook');
+    }
+  }, [profile]);
 
   // If we have a profile (optimistic from cache or verified from server), show book instantly
   if (profile) {
-    return <DevotionalBook />;
+    return (
+      <Suspense fallback={<div className="h-screen w-full bg-[#FDFCF8]" />}>
+        <DevotionalBook />
+      </Suspense>
+    );
   }
 
-  // While checking auth, show an empty parchment screen to avoid splash flicker
-  if (!isAuthReady) {
-    return <div className="h-screen w-full bg-[#FDFCF8]" />;
-  }
-
-  // Only show login if we are sure the user is unauthenticated
   return <LoginScreen />;
 }
 
