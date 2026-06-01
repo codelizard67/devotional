@@ -7,7 +7,9 @@ interface AuthContextType {
   user: User | null;
   profile: any | null;
   loading: boolean;
-  signIn: () => Promise<void>;
+  signInWithGoogle: () => Promise<void>;
+  signInWithEmail: (email: string, password: string) => Promise<void>;
+  signUpWithEmail: (email: string, password: string) => Promise<void>;
   registerWithCode: (code: string) => Promise<boolean>;
   logout: () => Promise<void>;
   authError: string | null;
@@ -121,7 +123,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  const signIn = async () => {
+  const signInWithGoogle = async () => {
     setError(null);
     try {
       console.log("Initiating Google OAuth...");
@@ -137,6 +139,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch (err: any) {
       console.error("Auth Failure:", err);
       setError(err.message || "Authentication failed. Please try again.");
+    }
+  };
+
+  const signInWithEmail = async (email: string, password: string) => {
+    setError(null);
+    try {
+      const { error: err } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      if (err) throw err;
+    } catch (err: any) {
+      console.error("Email sign-in failure:", err);
+      setError(err.message || "Sign in failed. Please try again.");
+    }
+  };
+
+  const signUpWithEmail = async (email: string, password: string) => {
+    setError(null);
+    try {
+      const { error: err } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: getRedirectUrl(),
+        },
+      });
+      if (err) throw err;
+    } catch (err: any) {
+      console.error("Email sign-up failure:", err);
+      setError(err.message || "Sign up failed. Please try again.");
     }
   };
 
@@ -192,7 +225,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, profile, loading, signIn, registerWithCode, logout, authError: error, syncProfile, isAuthReady }}>
+    <AuthContext.Provider value={{ user, profile, loading, signInWithGoogle, signInWithEmail, signUpWithEmail, registerWithCode, logout, authError: error, syncProfile, isAuthReady }}>
       {children}
     </AuthContext.Provider>
   );
