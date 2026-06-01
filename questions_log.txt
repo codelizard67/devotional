@@ -1,0 +1,704 @@
+    id: 'page-1',
+    id: 'page-2',
+    id: 'page-3',
+    id: 'jan-1',
+    question: "How does God's promise to be with you change your perspective on the unknown year ahead?"
+    id: 'jan-2',
+    question: "What decision are you currently facing that you need to lay before God today?"
+    id: 'jan-3',
+    question: "Are you truly willing to let God be your Guidepost, even if His path differs from your own plans?"
+    id: 'jan-4',
+    question: "What distractions are keeping you from a consistent prayer life, and will you turn those very things into subjects of prayer today?"
+    id: 'jan-5',
+    question: "In your daily commitment to Christ, are you striving to maintain His standards even when the world around you seems chaotic?"
+    id: 'jan-6',
+    question: "When you feel overburdened or weak, is your first response to turn to God in sincere prayer for new strength?"
+    id: 'jan-7',
+    question: "Are you allowing the 'glory of today' to be overshadowed by past regrets or future anxieties, or are you rejoicing in the present with Christ?"
+    id: 'jan-8',
+    question: "How can you practically share the priceless gift of God's love with someone whose path you cross today?"
+    id: 'jan-9',
+    question: "If you feel stuck in a 'dead-end street,' have you asked the Holy Spirit to plant new hope and meaning in your heart today?"
+    id: 'jan-10',
+    question: "When faced with provocation, do you stop to consider how Jesus would handle the situation before you react?"
+    id: 'jan-11',
+    question: "Is success or character your primary pursuit this year, and how can you reflect more of Jesus' humble image today?"
+    id: 'jan-12',
+    question: "Are you trying to handle life's tensions on your own, or are you anchored in a permanent experience of unity with Christ?"
+    id: 'jan-13',
+    question: "Have you stopped growing spiritually because the Holy Spirit has been pushed out of the center of your life?"
+    id: 'jan-14',
+    question: "In your moments of loss or discouragement, are you opening your heart to the tender comfort that only the Spirit of Christ can provide?"
+    id: 'jan-15',
+    question: "Are you serving God in your own way, or are you pausing to ask what His specific will is for you today?"
+    id: 'jan-16',
+    question: "Are you entering the new year in a partnership with God, or are you trying to face its challenges in your own strength?"
+    id: 'jan-17',
+    question: "Is the 'Light of the world' currently illuminating your path, or are you allowing past failures to cast a shadow over your future?"
+    id: 'jan-18',
+    question: "Are you identifying the 'enemy' of self-pity in your life today and choosing to live on the conquered ground provided by Christ?"
+    id: 'jan-19',
+    question: "What small 'seed' of an idea has God planted in your heart, and are you willing to wait for His creative imagination to help it grow?"
+    id: 'jan-20',
+    question: "Are you laying your concerns before God and waiting faithfully for His answer, or are you trying to strike a deal for what you want?"
+    id: 'jan-21',
+    question: "Are you following Christ according to the Scriptural way, or have you created a private version of Christianity that allows for compromise?"
+    id: 'jan-22',
+    question: "When facing adverse circumstances, do you remember that God is your Rock and Redeemer, or do you allow fear to make your heart tremble?"
+    id: 'jan-23',
+    question: "Do you believe that God is with you in a unique way tailored to your specific needs, and are you willing to wait quietly for Him?"
+    id: 'jan-24',
+    question: "Are you hiding behind your 'weaknesses,' or will you allow the Holy Spirit to help you reach the potential God sees in you?"
+    id: 'jan-25',
+    question: "Does your faith remain centered on the foundation of love and surrender to Christ, even amidst conflicting opinions and doctrines?"
+    id: 'jan-26',
+    question: "How often do you shower God with the praise He deserves, and how might a heart of praise transform your relationship with Christ?"
+    id: 'jan-27',
+    question: "Is your pursuit of knowledge balanced with a 'fear of the Lord' that transforms that knowledge into true, inspired wisdom?"
+    id: 'jan-28',
+    question: "Are you seeking to encounter Jesus among people in distress through deeds of compassion and love?"
+    id: 'jan-29',
+    question: "Are you performing your service to Christ with a joyful and humble heart, or are you allowing a negative attitude to spoil the quality of your deeds?"
+    id: 'jan-30',
+    question: "Instead of making overwhelming vows, will you commit to living this single day optimally in the presence and strength of the living Christ?"
+    id: 'jan-31',
+    question: "Is a negative opinion of yourself holding back the unique ideas God has given you? Will you accept the truth that you are of immeasurable value in His eyes?"
+    id: 'february-prayer',
+    id: 'feb-1',
+    question: "What human desires or preoccupations are currently relegating Christ to second place in your life, and will you invite the Holy Spirit to take control today?"
+    id: 'feb-2',
+    question: "Are you opening your eyes to the daily miracles God performs around you, or are you dismissing them as mere coincidences?"
+    id: 'feb-3',
+    question: "Are you enslaved by variable moods and circumstances, or have you experienced the freedom that comes from being controlled by the Spirit of the Lord?"
+    id: 'feb-4',
+    question: "What are you truly expecting from life today? Are you choosing to have faith in God's plan rather than in the fear of failure?"
+    id: 'feb-5',
+    question: "Are you more focused on your 'rights' and demands, or on how you can co-operate with God to fulfill His holy will in your life?"
+    id: 'feb-6',
+    question: "Before condemning someone, do you look for positive aspects and try to act towards them as Jesus would have done?"
+    id: 'feb-7',
+    question: "Will you allow the Holy Spirit to guide you towards someone in distress today, discovering the fulfillment that comes from selfless service?"
+    id: 'feb-8',
+    question: "In times of trial, are you using the 'affliction' as a school to learn God's decrees and grow closer to the Savior?"
+    id: 'feb-9',
+    question: "Are you reading the Bible as a personal message from God, and are you inviting the Holy Spirit to transform the words into dynamic wisdom for your life?"
+    id: 'feb-10',
+      "What a tragic and irreparable loss! It is really an important question: \"What am I doing with my life? Is it being lived so that I will achieve my calling in God's plan regarding my destiny?\"",
+    question: "Are you seeking God's purpose for your life today, or are you ignoring your true potential in favor of your own selfish plans?"
+    id: 'feb-11',
+    question: "When you reach the end of your own reserves, will you wait for God to renew your strength and help you soar like an eagle?"
+    id: 'feb-12',
+    question: "Are you submitting yourself to the Holy Spirit daily so that you can be a 'perfectly tuned' instrument in the Master's hand?"
+    id: 'feb-13',
+    question: "Is your commitment to Jesus Christ the foundation of every other choice you make on your daily path?"
+    id: 'feb-14',
+    question: "Are you seeking to receive love from others, or are you discovering the miracle of joy that comes from giving love as a selfless sacrifice?"
+    id: 'feb-15',
+    question: "When things around you appear dark and terrifying, do you find courage in the certain knowledge that God is wholly in control?"
+    id: 'feb-16',
+    question: "Are you standing united with fellow believers against the forces of evil, or are you allowing insignificant differences to cause dissension?"
+    id: 'feb-17',
+    question: "Are you allowing your problems to overwhelm you, or are you turning to Christ to receive the strength and peace that surpasses all understanding?"
+    id: 'feb-18',
+    question: "Are you allowing the petty remarks of others to hurt you, or are you resting in the strength of the Holy Spirit who lives within you?"
+    id: 'feb-19',
+    question: "Are you focusing more on material perfection or on the moral and spiritual excellence that comes from walking within God's will?"
+    id: 'feb-20',
+    question: "Have you accepted Christ's offer to share in His life, and are you living with a quality of honesty and love that reflects His character?"
+    id: 'feb-21',
+    question: "Instead of self-accusation during hardships, are you searching for the positive lesson God wants to teach you in the 'valley of despair'?"
+    id: 'feb-22',
+    question: "Are your words today serving to inspire and heal others, or are they indicators of an impoverished mind and spirit?"
+    id: 'feb-23',
+    question: "When the world feels chaotic, do you find hope in the abundance of life Christ offers both now and for eternity?"
+    id: 'feb-24',
+    question: "Are you remaining faithful to God's standards even when it seems like wrongdoers are prospering?"
+    id: 'feb-25',
+    question: "Will you choose your words and timing carefully today, ensuring that they are spoken with the love and sincerity of Jesus?"
+    id: 'feb-26',
+    question: "Are you taking refuge in the 'everlasting arms' of God to banish the fears and insecurities of our world today?"
+    id: 'feb-27',
+    question: "Instead of trying to hide your mistakes from God, will you confess them in prayer and receive His transformative peace and forgiveness?"
+    id: 'feb-28',
+    question: "Are you acting as an active partner with Christ, allowing His Spirit to manage and control your daily conduct?"
+    id: 'feb-29',
+    question: "Are you willing to embrace self-denial and bear your cross with joy as an answer to Jesus' incomparable sacrifice for you?"
+    id: 'march-prayer',
+    id: 'mar-1',
+    question: "Are you cultivating the art of thanksgiving to rediscover the vitality of life that God provides?"
+    id: 'mar-2',
+    question: "Will you allow the light of Christ to transfigure the dark or 'arid' areas of your life into something beautiful today?"
+    id: 'mar-3',
+    id: 'mar-4',
+    question: "Will you discipline yourself to pray even during times of spiritual drought, trusting that it remains your vital channel to God?"
+    id: 'mar-5',
+    question: "Are you cherishing your communication with the Master through sincere prayer, or has it lapsed into a series of meaningless phrases?"
+    id: 'mar-6',
+    question: "After the example of Jesus, will you seek the company of the humble and outcast rather than reveling in the brilliance of popularity?"
+    id: 'mar-7',
+    question: "When you feel spiritually inferior, do you remember that your acceptance by God depends solely on your faith in Jesus' grace rather than your own achievements?"
+    id: 'mar-8',
+    question: "Are you laying your plans before the Lord in prayer, trusting Him to lead you through every door He opens in His perfect timing?"
+    id: 'mar-9',
+    question: "Are you dedicating your unique talents to leave the world a better place, keeping 'becoming like Christ' as your highest aspiration?"
+    id: 'mar-10',
+    question: "When you experience the pain of rejection, do you take comfort in the promise that Jesus will never forsake you, regardless of how people treat you?"
+    id: 'mar-11',
+    question: "Will you stand up for what is right today, even if it makes you unpopular, trusting that your Master stood firm under much greater pressure?"
+    id: 'mar-12',
+    question: "Are you turning to the Risen Savior to receive new hope and inspiration when your personal plans fail or your path becomes dark?"
+    id: 'mar-13',
+    question: "Is your service to God motivated by genuine love for others, or has it become a series of empty rituals and formalities?"
+    id: 'mar-14',
+    question: "In your busy schedule, are you still sensitive enough to make time for a comforting word or a sympathetic smile for someone in distress?"
+    id: 'mar-15',
+    question: "Have you identified and removed the 'idols' in your life that prevent you from making Jesus the absolute focus of your existence?"
+    id: 'mar-16',
+    question: "Is your religious life a tiresome discipline of rules, or a joyful experience of God's abundant life and caring love?"
+    id: 'mar-17',
+    question: "Are you allowing the Spirit of Christ to govern your thoughts, or are you still relying on your own limited understanding to navigate life's complexities?"
+    id: 'mar-18',
+    question: "When God says 'no' to your requests, do you trust Him enough to believe that He knows your true needs better than you do?"
+    id: 'mar-19',
+    question: "Do you find peace in the promise of the resurrection, knowing that death is not an ending but a beginning of eternal life with Christ?"
+    id: 'mar-20',
+    question: "Will you follow Jesus' example today and choose the path of humble service to heal the hurts and bitterness in your relationships?"
+    id: 'mar-21',
+    question: "Are you remaining open to the 'flashes of inspiration' from the Holy Spirit, or have you closed your mind to new ways of serving God?"
+    id: 'mar-22',
+    question: "Are you willing to perform the 'unpleasant' but essential tasks of supporting and advising a grieving family long after the funeral is over?"
+    id: 'mar-23',
+    question: "Are you allowing your trials to lead you to a deeper understanding of God's grace, or are you becoming bitter under the weight of suffering?"
+    id: 'mar-24',
+    question: "During times of spiritual drought, are you persisting in your trust in God, or are you allowing doubt to silence your prayers?"
+    id: 'mar-25',
+    question: "Are you prepared to pay the price of true discipleship by putting Christ's interests above your own desires today?"
+    id: 'mar-26',
+    question: "Are you seeking the world's version of greatness through status and power, or Christ's version through humble and selfless service?"
+    id: 'mar-27',
+    question: "In the midst of life's storms, are you resting in the peace that Jesus gives, which is entirely independent of your outward circumstances?"
+    id: 'mar-28',
+    question: "Is your faith a bridge that connects you to God's strength, or are you trying to cross life's obstacles on your own?"
+    id: 'mar-29',
+    question: "Are you living in the joyful freedom of God's unmerited favor, or are you still trying to earn your way into His acceptance?"
+    id: 'mar-30',
+    question: "Are you allowing the 'new creation' within you to flourish, or are you still dragging the failures and regrets of your 'old life' behind you?"
+    id: 'mar-31',
+    question: "As you contemplate the cross, does the knowledge of Jesus' ultimate sacrifice inspire you to a life of total dedication and service to Him?"
+    id: 'apr-prayer',
+    id: 'apr-1',
+    question: "Are you relying on your own human weakness to serve God, or are you trusting Christ to provide everything you need to follow His path?"
+    id: 'apr-2',
+    question: "In your moments of deepest loneliness or sorrow, will you invite the Holy Spirit to be your Comforter and experience His healing love?"
+    id: 'apr-3',
+    question: "Do you feel discouraged by your 'inadequate' prayer life, or do you recognize that every thought directed towards God is a natural and powerful prayer?"
+    id: 'apr-4',
+    question: "Are you seeking satisfaction in temporary material pleasures, or have you invited the Son into your heart to experience a truly abundant life?"
+    id: 'apr-5',
+    question: "As the years pass, is your heart becoming more hardened in its views, or are you remaining open to the liberating inspiration of the Holy Spirit?"
+    id: 'apr-6',
+    question: "When everything seems to be going wrong, do you continue to grumble and complain, or do you retreat into God's presence to find a divinely inspired path?"
+    id: 'apr-7',
+    question: "Are you mending the breaches in your human relationships, or are you allowing a bitter spirit to stifle your enthusiasm for God?"
+    id: 'apr-8',
+    question: "Are you staying awake with your worries tonight, or are you casting your anxiety on the One who neither slumbers nor sleeps?"
+    id: 'apr-9',
+    question: "Is your Christianity defined by narrow-minded doctrines, or by the amount of love it generates toward neighbors who think differently than you do?"
+    id: 'apr-10',
+    question: "Are you creating beautiful memories today by walking with your Master through each trial, or are you allowing past failures to haunt your current peace?"
+    id: 'apr-11',
+    question: "Do you view Jesus as a faraway, aloof figure, or as a faithful Friend who deeply understands your human emotions and sorrows?"
+    id: 'apr-12',
+    question: "Do you relate to Christ only as a historical teacher, or as the living, reigning Savior whom you meet daily in quiet seclusion?"
+    id: 'apr-13',
+    question: "Are you dismissing positive 'coincidences' in your life, or are you recognizing them as God's personal and everyday answers to your prayers?"
+    id: 'apr-14',
+    question: "Are you treasuring and memorizing Scripture verses as 'spiritual ammunition' to protect you during times of weakness and temptation?"
+    id: 'apr-15',
+    question: "Is your restlessness a symptom of a spiritual hunger that can only be satisfied by spending quality time in the presence of your heavenly Father?"
+    id: 'apr-16',
+    question: "Are you treating your faith as a part-time interest, or as a dedicated way of life that demands the strength of the Holy Spirit every day?"
+    id: 'apr-17',
+    question: "Will you perform your tasks today with such joy and diligence that you exceed expectations and earn the respect of those around you?"
+    id: 'apr-18',
+    question: "Are you trying to forgive in your own strength, or will you ask God to replace your bitterness with the healing balm of His peace?"
+    id: 'apr-19',
+    question: "Do you view your problems as insurmountable obstructions or as divine opportunities to deepen your relationship with God?"
+    id: 'apr-20',
+    question: "When evil seems to triumph in the world, do you find strength in the eternal truth that God is almighty and still in complete control?"
+    id: 'apr-21',
+    question: "Are you attempting to serve God using your own energy, or are you drawing your strength from a constant awareness of Christ’s living presence?"
+    id: 'apr-22',
+    question: "Have you reached the point in your spiritual journey where you have moved from working FOR God to allowing God to work THROUGH you?"
+    id: 'apr-23',
+    question: "When you feel like giving up on your higher purpose, will you turn to Christ who understands your suffering and offers His marvelous light?"
+    id: 'apr-24',
+    question: "Are you contributing to the world's cycle of fear and mistrust, or are you being an example of the 'perfect love' that drives out fear?"
+    id: 'apr-25',
+    question: "Do you see your future as ruled by blind fate, or do you rest in the knowledge that you and your future are in the hands of a caring God?"
+    id: 'apr-26',
+    question: "Are you satisfied with the memory of your conversion, or are you actively growing in the grace and knowledge of your Lord every single day?"
+    id: 'apr-27',
+    question: "Is your Christian attitude only visible on Sundays, or are you consistently following Jesus' instructions when you are most susceptible to anger or pride?"
+    id: 'apr-28',
+    question: "Will you take the first step toward peace by praying for those you consider enemies, trusting that God can transform your bitterness into a forgiving spirit?"
+    id: 'apr-29',
+    question: "Beyond your search for knowledge and spiritual gifts, are you allowing the love of Jesus to be the primary reflection of your life to the world?"
+    id: 'apr-30',
+    question: "When a situation seems hopeless, do you remember that God specializes in turning Good Friday defeats into Easter Sunday victories?"
+    id: 'may-prayer',
+    id: 'may-1',
+    question: "Are you viewing current world events through the lens of fear, or through the lens of God's eternal design and divine plan for mankind?"
+    id: 'may-2',
+    question: "When circumstances confuse and trouble you, will you wait for God to reveal the sacred purpose behind the events in your life?"
+    id: 'may-3',
+    question: "In times of spiritual depression, do you consciously recall the many times God has protected and provided for you in your past?"
+    id: 'may-4',
+    question: "Are you maintaining a healthy personal relationship with Christ through prayer so that you are prepared when life's unpredictable setbacks strike?"
+    id: 'may-5',
+    question: "Are you following the many detours and compromises offered by the world, or are you keeping strictly to the ancient path of God's commandments?"
+    id: 'may-6',
+    question: "When the demands of life exceed your spiritual reserves, will you return to the fundamentals of your faith to restore balance and perspective?"
+    id: 'may-7',
+    question: "Instead of relying on your own fluctuating confidence, will you invite the Holy Spirit to become your inner stronghold and banish all fear?"
+    id: 'may-8',
+    question: "Are you expanding your prayer life beyond your immediate circle to find a more intimate and enriching communion with the living Christ?"
+    id: 'may-9',
+    question: "Have you allowed certain habits, addictions, or material pursuits to become idols that relegate God to a secondary position in your life?"
+    id: 'may-10',
+    question: "Are you seeking material success to the exclusion of your spiritual growth, or are you allowing the Holy Spirit to give your life a more profound meaning?"
+    id: 'may-11',
+    question: "Is your love for God merely a noble sentiment, or is it a dynamic force that impels you to take constructive action and alleviate the needs of others?"
+    id: 'may-12',
+    question: "Are you trying to force Christ's principles into your own preconceived ideas and doctrines, thereby limiting His work and betraying His true character?"
+    id: 'may-13',
+    question: "Do you view death and change as threats to your existence, or do you rest in the joy of the abundant life that Jesus' resurrection made possible?"
+    id: 'may-14',
+    question: "When you feel alone in the world, do you remember that as a child of God, you are part of the most privileged and never-forsaken family on earth?"
+    id: 'may-15',
+    question: "Do you attend church services for the sake of human entertainment, or to be moved by the power of the Holy Spirit to commit your life more fully to Jesus?"
+    id: 'may-16',
+    question: "Are you relying on religious inheritance and external structures, or on the invisible support of the Spirit of Christ dwelling within your own spirit?"
+    id: 'may-17',
+    question: "Will you accept the responsibility of choosing nobility and truth today, rather than setting your spiritual goals lower to conform to popular opinion?"
+    id: 'may-18',
+    question: "Is your 'boredom' actually an indication of a deficiency in your faith and a detachment from the wonders of God’s fascinating world?"
+    id: 'may-19',
+    question: "Is your 'religion' just a collection of formal theories and hypocritical behaviors, or is it God actively at work through your life as a dedicated disciple?"
+    id: 'may-20',
+    question: "Have you allowed dogmas and personal values to become so jumbled that you have lost the focus on Christ's central position in your life?"
+    id: 'may-21',
+    question: "Are you limiting your encounters with God to church buildings, or are you recognizing His presence in nature and in your service to those in need?"
+    id: 'may-22',
+    question: "Are you carefully planning for your financial profits while neglecting to plan for the spiritual reality of eternity that awaits every heart?"
+    id: 'may-23',
+    question: "Does the humanity of Jesus make Him more accessible to you, knowing He understands your physical pain and emotional struggles from personal experience?"
+    id: 'may-24',
+    question: "Are you drifting into a lukewarm 'spiritual sleep,' or are you actively working at your faith through prayer, study, and fellowship?"
+    id: 'may-25',
+    question: "In your interactions with 'outsiders' and subordinates today, will they see the grace and patience of Christ reflected in your behavior?"
+    id: 'may-26',
+    question: "Have you become so busy working FOR God that you have neglected to spend the quality time WITH Him needed to sustain your soul?"
+    id: 'may-27',
+    question: "In a world often filled with chaos and lawlessness, are you anchoring your security in the unfathomable love and peace of Jesus Christ?"
+    id: 'may-28',
+    question: "Is your courtesy a superficial social act, or is it a genuine expression of Christ’s love dwelling in your heart?"
+    id: 'may-29',
+    question: "Will you allow the disappointment of failed plans to embitter your spirit, or will you use it as motivation to lean harder on God's sustaining hand?"
+    id: 'may-30',
+    question: "Are you trying to force others into your own spiritual mold, or are you respecting the unique way the Master chooses to call and lead each individual child?"
+    id: 'may-31',
+    question: "Like Moses, are you willing to faithfully commission the next generation and trust God with the future of His work, even when you cannot enter the Promised Land yourself?"
+    id: 'jun-prayer',
+    id: 'jun-1',
+    question: "When God answers your prayers, do you remember to 'come back' with a heart full of audible praise and gratitude, or do you take His blessings for granted?"
+    id: 'jun-2',
+    question: "In the midst of an ever-changing world, are you anchoring your soul to the unchangeable nature of God, who remains your rock and fortress?"
+    id: 'jun-3',
+    question: "Are you making the mistake of being too busy FOR God to be with Him, or will you choose the 'more excellent way' of quietness and prayer?"
+    id: 'jun-4',
+    question: "Are you accepting the full counsel of Scripture, including the disciplines of the Old Testament that provide the blueprint for Christian love?"
+    id: 'jun-5',
+    question: "Are you restricting your search for Jesus to holy places, or are you expecting to encounter Him in the simple, everyday tasks of your ordinary life?"
+    id: 'jun-6',
+    question: "Will you persevere in showing patient, Christ-like love to those struggling with doubt, rather than abandoning them to their despondency?"
+    id: 'jun-7',
+    question: "Is your anger a destructive, self-centered fire, or are you allowing the Holy Spirit to channel your emotions into a righteous power for good?"
+    id: 'jun-8',
+    question: "Are you living as a slave to fear and guilt, or are you walking as a cherished child who confidently calls the Almighty God 'Abba, Father'?"
+    id: 'jun-9',
+    question: "Beyond scheduled rituals, are you maintaining a continuous, open conversation with God about every burden and joy you encounter today?"
+    id: 'jun-10',
+    question: "Like the disciples at the lake, are you willing to risk appearing foolish by obeying Jesus' instructions even when they contradict your expertise?"
+    id: 'jun-11',
+    question: "Have you allowed complex dogmas to obscure the holy simplicity of Jesus' primary command: to love God and your neighbor unconditionally?"
+    id: 'jun-12',
+    question: "Instead of surrendering to despair, will you accept your current trials as a divine discipline intended to develop your spiritual endurance?"
+    id: 'jun-13',
+    question: "When the future appears dark and unstable, do you find security in the knowledge that the One who holds the universe together also holds your life?"
+    id: 'jun-14',
+    id: 'jun-15',
+    question: "In the midst of your busy life, do you take time to contemplate the absolute greatness of the One who created and sustains every star in the universe?"
+    id: 'jun-16',
+    question: "Since Christ holds the keys to life and death, will you release your paralyzing fear of the unknown and trust His sovereign plan for your transition to eternity?"
+    id: 'jun-17',
+    question: "Do you have a closed mind that limits God's work, or are you secure enough in your faith to explore other channels of truth that broaden your spiritual perspective?"
+    id: 'jun-18',
+    question: "In a world that thrives on criticism, will you choose to be the one voice that provides the genuine encouragement and spiritual support that others so desperately need?"
+    id: 'jun-19',
+    question: "Is your joy dependent on your own physical strength and accomplishments, or are you secure in the fact that God delights in your simple hope and trust in Him?"
+    id: 'jun-20',
+    question: "Beyond eloquent words and religious theories, is your life a practical demonstration of the unselfish love that proves you have truly passed from death to life?"
+    id: 'jun-21',
+    question: "Are you treating prayer as an occasional emergency exit, or as the constant, vital lifeline that invites God's heavenly resources into your daily struggles?"
+    id: 'jun-22',
+    question: "Are you allowing the 'greater One' living within you to sensitize your spirit to truth and protect you from the deceptive influences of the world?"
+    id: 'jun-23',
+    question: "Are you polluting your mind with the negative news and gossip of the day, or are you intentionally dwelling on the noble and praiseworthy things that God provides?"
+    id: 'jun-24',
+    question: "Like Martha, are you so distracted by the 'many things' of service that you have forgotten the 'one thing' that is truly important—sitting at the feet of Jesus?"
+    id: 'jun-25',
+    question: "When the noise of life becomes overwhelming, will you allow the Good Shepherd to lead you to the quiet waters of His presence where your soul can be restored?"
+    id: 'jun-26',
+    question: "Are you still trying to carry the heavy weight of your worries, or have you truly 'cast' them onto the shoulders of the One who cares for you and understands your needs?"
+    id: 'jun-27',
+    question: "Do you recognize the face of Christ in the poor, the sick, and the stranger, and are you responding with the same compassion you would show to the Master Himself?"
+    id: 'jun-28',
+    question: "Is the primary filter of your decisions the question, 'Does this action bring glory to God,' or is it more often focused on your own personal benefit?"
+    id: 'jun-29',
+    question: "Can you maintain a spirit of joy even when your faith is being refined in the furnace of affliction, knowing that the outcome is of eternal value?"
+    id: 'jun-30',
+    question: "Are you consulting God’s Word only for the big decisions, or are you allowing it to be the practical lamp that guides your very next step in the darkness?"
+    id: 'jul-prayer',
+    id: 'jul-1',
+    question: "When you feel like you are walking through a valley of shadows, do you find comfort in the fact that even darkness is like light to your ever-present God?"
+    id: 'jul-2',
+    question: "Are you seeking God with casual indifference, or with the earnest hunger of someone who truly believes He rewards those who search for Him with all their heart?"
+    id: 'jul-3',
+    question: "Will you stop trying to force God to agree with your limited logic and instead trust the wisdom of His higher ways and eternal thoughts?"
+    id: 'jul-4',
+    question: "Is your inner peace dependent on a trouble-free life, or are you experiencing the supernatural peace that Jesus gives even in the midst of conflict?"
+    id: 'jul-5',
+    question: "When life's circumstances seem to contradict God's Word, will you stand firm on the absolute certainty that He is not a man that He should lie?"
+    id: 'jul-6',
+    question: "Are you exhausting yourself by trying to accomplish God's work through human effort, or are you relying on the quiet, invincible power of the Holy Spirit?"
+    id: 'jul-7',
+    question: "As a 'dearly loved child,' are you imitating your Father’s character by making love the defining characteristic of every relationship in your life?"
+    id: 'jul-8',
+    question: "Has your Christian life become a routine of duty? Will you ask God to restore the fresh and vibrant joy you first felt when you realized you were forgiven?"
+    id: 'jul-9',
+    question: "In a dangerous world, are you living in a state of persistent anxiety, or are you resting in the secure shadow of the Almighty’s protection?"
+    id: 'jul-10',
+    question: "In your moments of loneliness or spiritual apathy, do you realize that it is truly impossible to travel beyond the reach of God's persistent and unfathomable love?"
+    id: 'jul-11',
+    question: "Are you still nursing old wounds that poison your present, or will you allow the Holy Spirit to lead you to the maturity found in genuine forgiveness?"
+    id: 'jul-12',
+    question: "Before you join the crowd in negative criticism, will you choose to see your neighbor through the eyes of Jesus and consider the hidden burdens they may be carrying?"
+    id: 'jul-13',
+    question: "Are you living a 'divided life' by keeping your faith out of your business affairs, or are you making the living Christ your most trusted business partner?"
+    id: 'jul-14',
+    question: "When the weight of the world makes you pessimistic, will you pause to recall the specific times God's love filled your life and give Him the praise He deserves?"
+    id: 'jul-15',
+    question: "Are you growing impatient because God hasn't answered your request yet, or can you trust that His eternal perspective sees exactly what is best for your future?"
+    id: 'jul-16',
+    question: "Are you allowing theological differences to build walls of bitterness, or are you striving to keep the unity of the Spirit through the bond of Christ's peace?"
+    id: 'jul-17',
+    question: "Instead of following the low standards of the world, will you choose the path of excellence by submitting every sphere of your life to the instructions of God's Word?"
+    id: 'jul-18',
+    question: "Is your faith based on the shifting sands of your current emotions, or is it grounded on the unshakeable Rock that is higher than your ever-changing feelings?"
+    id: 'jul-19',
+    question: "Are you constantly judging others for their flaws, or are you using the intuition of the Holy Spirit to identify and encourage the hidden potential for good in everyone you meet?"
+    id: 'jul-20',
+    id: 'jul-21',
+    id: 'jul-22',
+    id: 'jul-23',
+    id: 'jul-24',
+    question: "Are you confining the living Christ within the narrow walls of your own intellectual comfort zone, or are you open to the 'unexplored depths' of what He can do in your life?"
+    id: 'jul-25',
+    id: 'jul-26',
+    id: 'jul-27',
+    id: 'jul-28',
+    id: 'jul-29',
+    id: 'jul-30',
+    id: 'jul-31',
+    id: 'aug-prayer',
+    id: 'aug-1',
+    question: "Are you treating the Bible as a textbook for theological arguments, or as the living Word that has hands to take possession of your heart and feet to follow you into your daily life?"
+    id: 'aug-2',
+    question: "When you walk through a dark path and feel you can no longer find the words to pray, will you trust that Christ is closer to you than He has ever been?"
+    id: 'aug-3',
+    question: "In the quiet moments of your day, do you pause to express 'helpless wonder' and genuine love for the sheer majesty and greatness of your Creator?"
+    id: 'aug-4',
+    question: "Instead of wandering in the wilderness of uncertainty, are you actively allowing the Counselor—the Spirit of Truth—to direct every facet of your modern life?"
+    id: 'aug-5',
+    question: "Are you willing to pay the 'demanding price' of abandoning your own selfish plans to experience the deliverance that comes from walking in God’s perfect way?"
+    id: 'aug-6',
+    question: "Do you realize that your life is part of God’s own revelation of Himself, and are you responding to the responsibility of living up to His high expectations for you?"
+    id: 'aug-7',
+    question: "When your plans go awry, do you immediately look for someone to blame, or do you stop to ask if you were walking within God’s perfect and sacred plan for your life?"
+    id: 'aug-8',
+    question: "When your thoughts wander during prayer, do you give up in frustration, or do you recognize that Jesus is already waiting to meet you in the quietness of your heart?"
+    id: 'aug-9',
+    question: "Is the center of your spiritual life a set of debated dogmas and church traditions, or is it a personal, soul-hunger to know the living Christ more intimately?"
+    id: 'aug-10',
+    question: "In the 'Babel of tongues' in today's world, are you making your spirit a tranquil pool where the serene light of God's truth can be clearly reflected?"
+    id: 'aug-11',
+    question: "Are you grinding through life's battle in your own strength, or have you invited God into an active partnership where His grace becomes your abundant helper?"
+    id: 'aug-12',
+    question: "When you feel 'out of your depth' in business or personal decisions, are you seeking Christ's will first as the only sure foundation for calm and logical action?"
+    id: 'aug-13',
+    question: "Are your problems appearing bigger than your concept of God, or are you building spiritual reserves today that will stand firm when the inevitable storms loom?"
+    id: 'aug-14',
+    question: "Are you satisfied with knowing the Christ of history, or are you possessed by a passionate longing to experience His immanent, living presence in this very moment?"
+    id: 'aug-15',
+    question: "Does your 'busy schedule' make people feel like annoying intruders, or are you reflecting the same peaceful patience that Jesus showed to everyone who crossed His path?"
+    id: 'aug-16',
+    question: "Is your zeal for the Lord based on the fading glory of material assets, or is it the enduring character that reflects decades of walking closely with the eternal Christ?"
+    id: 'aug-17',
+    question: "Will you allow the 'big mystery'—Christ in you—to transform your fears into self-confidence and your expectation of new spiritual heights?"
+    id: 'aug-18',
+    question: "Has your spiritual discipline become a stale religious cliché, or are you still approaching God with the respect and awe that allows His inexhaustible power to renew your strength?"
+    id: 'aug-19',
+    question: "Are you still a slave to your own temper and bitterness, or have you accepted the gift of true freedom that comes from being delivered into the light of Christ's love?"
+    id: 'aug-20',
+    question: "In the perplexity of decision-making, are you relying on your own limited vision, or are you asking the Holy Spirit to grant you depth of insight from an eternal perspective?"
+    id: 'aug-21',
+    question: "Are you waiting for God to magically grant you more faith, or are you accepting your responsibility to wait upon Him and practice the faith you already have?"
+    id: 'aug-22',
+    question: "When Satan sows seeds of self-pity in the soil of your loneliness, will you hold on to the assurance that God’s hand rests upon you to illuminate your darkest path?"
+    id: 'aug-23',
+    question: "Is your energy being wasted on a multitude of competing goals, or are you inviting the Holy Spirit to prioritize your tasks according to God’s organized plan for your life?"
+    id: 'aug-24',
+    question: "Are you allowing the 'habit' of worry to alienate you from God, or are you choosing the living faith that acts as the death-knell to all destructive anxiety?"
+    id: 'aug-25',
+    question: "Instead of relying on temporary medical 'crutches' for stress, will you accept the infallible rest that Jesus—who also worked under immense pressure—offers to your soul?"
+    id: 'aug-26',
+    question: "Are you seeking a liberal religion that makes no demands on you, or are you willing to bring your mind and spirit under the strong and beautiful discipline of the Holy Spirit?"
+    id: 'aug-27',
+    question: "When the supportive presence of family and friends falls away during a crisis, do you find your ultimate security in the goodness and faithfulness of your heavenly Companion?"
+    id: 'aug-28',
+    question: "When your faith starts to wane, are you brave enough to turn 'the spotlight of truth' on your heart and see if something—or someone—has subtly replaced Christ at the center?"
+    id: 'aug-29',
+    question: "Are you treating religious activities like Bible study and good works as the goal itself, or are you using them as resources to achieve the true ideal of becoming more like Jesus?"
+    id: 'aug-30',
+    question: "Do you only call to God from the 'depths' after you've exhausted every other resource, or will you spare yourself unnecessary worry by turning to Him the moment a problem crops up?"
+    id: 'aug-31',
+    question: "Are you struggling through Bible study as an exhausting duty, or are you reaching out to the Author in the silence of your room so that the Word can assume new life within you?"
+    id: 'sep-prayer',
+    id: 'sep-1',
+    question: "Do you still feel like a slave to your own self-centered desires, or have you fully accepted the bridge Christ built to restore your relationship with God?"
+    id: 'sep-2',
+    question: "If you find it difficult to speak about your faith, is your life still telling the story of Christ's love through your patient interactions and compassionate deeds?"
+    id: 'sep-3',
+    question: "Are you walking beside Jesus on your own 'road to Emmaus' without recognizing Him, or have you invited Him into the intimate details of your day?"
+    id: 'sep-4',
+    question: "Does your presence bring friendly reassurance and a sense of welfare to those around you, mirroring the way Jesus treated even His enemies?"
+    id: 'sep-5',
+    question: "Are you trying to manage your spiritual despondency alone, or are you tapping into the 'uplifting strength' that only comes from sincere praise of the Almighty?"
+    id: 'sep-6',
+    question: "When the 'price' of following Jesus feels too high, are you tempted to return to your old life, or will you ask the Holy Spirit for the strength to follow Him to the end?"
+    id: 'sep-7',
+    question: "Are you approaching new people with suspicion and bitterness, or is the 'perfect love' of Christ in your heart driving out your fear and eliciting trust in others?"
+    id: 'sep-8',
+    question: "When you are immersed in a task that prevents you from 'thinking' about God, can you still perform that task with excellence as an act of practical worship?"
+    id: 'sep-9',
+    question: "Are you allowing yourself to be the 'plaything of moods' beyond your control, or are you claiming your heritage as a spiritual being created for greatness in God's image?"
+    id: 'sep-10',
+    question: "Do you associate worship with a cheerless 'duty' to be checked off, or is it a joyful celebration of the life-giving Spirit that leads you on God's chosen path?"
+    id: 'sep-11',
+    question: "Are you trying to hide your footsteps from the 'blinding light' of Christ’s truth, or will you find peace by honestly confessing the guilt that burdens your soul?"
+    id: 'sep-12',
+    question: "Are you attempting to 'storm the gates' with your own demands, or are you humbly submitting your will to the One who truly knows what is best for your future?"
+    id: 'sep-13',
+    question: "Are you content with 'sloshing around in the muddy waters' of spiritual mundanity, or do you have a deep yearning to return to the reality of God's grace?"
+    id: 'sep-14',
+    question: "In a world where it seems like 'dishonesty prospers,' will you stand firm on your Christian principles and trust the Holy Spirit to give you ultimate victory?"
+    id: 'sep-15',
+    question: "When someone hurts you with a snide remark, do you nurse a miserable grudge or do you view the incident against the backdrop of God's infinite greatness and forgiveness?"
+    id: 'sep-16',
+    question: "Are you arguing about percentages and deductions, or have you accepted that you are a steward of a life and possessions that belong completely to Christ?"
+    id: 'sep-17',
+    question: "In your times of deepest trial, do you feel like Good Friday is the final word, or do you have faith that God is working toward an 'Easter Sunday' victory in your life?"
+    id: 'sep-18',
+    question: "As a 'young Christian' (no matter your age), are you taking the personal responsibility to fuel your spiritual growth through consistent prayer and Bible study?"
+    id: 'sep-19',
+    question: "Have you become so familiar with God's blessings that you barely notice the birds and the sun, or are you receiving each 'mundane' gift with active thanksgiving?"
+    id: 'sep-20',
+    question: "Are you getting lost in rigid moral codes and theological theories, or are you embracing the simple, profound joy of loving God and your neighbor through Christ?"
+    id: 'sep-21',
+    question: "Do you doubt your ability to reflect Christ's nature to the world, or are you fully surrendering to the Holy Spirit who provides the strength to meet the commission?"
+    id: 'sep-22',
+    question: "Is your work for the Lord a 'tedious calling' that you perform with a grumbling attitude, or have you invited the living Christ to be your partner in every undertaking?"
+    id: 'sep-23',
+    question: "Is your spiritual perspective so narrow that you only believe in what you can touch, or is your inner eye focused on the eternal, unseen values that truly shape our character?"
+    id: 'sep-24',
+    question: "As the world changes around you, are you allowing your value system to drift, or are you humbling yourself before God to ensure your new path has His blessing?"
+    id: 'sep-25',
+    question: "Are your words freezing those around you with bitterness and ridicule, or is there a 'tenderness' in your voice that reflects the sympathetic love of Jesus?"
+    id: 'sep-26',
+    question: "Are you sacrificing your health by refusing to share your God-given tasks, or will you accept the wisdom of inviting others to help you serve more effectively?"
+    id: 'sep-27',
+    question: "When the 'dynamism' disappears from your faith, do you stop to relive the mountaintop experiences of God's love to rekindle the fire of your enthusiasm?"
+    id: 'sep-28',
+    question: "Are you managing to 'deceive' yourself and others with a religious facade, or are you ready to be honest with God and let your hidden inhibitions disappear in His love?"
+    id: 'sep-29',
+    question: "Do you respond to temptation by simply trying to ignore it, or are you proactively filling your mind with constructive, sanctified thoughts and drawn-down strength from prayer?"
+    id: 'sep-30',
+    question: "When disaster strikes despite your virtuous life, do you react with immediate questioning, or do you find peace in the eternal perspective that God’s grace is truly sufficient?"
+    id: 'oct-intro',
+    id: 'oct-01',
+    question: "When the wind and waves of life's problems threaten to drown you, will you follow Peter's example and reach out for the hand of Jesus that is already at your side?"
+    id: 'oct-02',
+    question: "Are you keeping a distance from Christ because you feel unworthy of His love, or have you accepted that His grace is a free gift that can never be earned?"
+    id: 'oct-03',
+    question: "Are you still trying to use excuses to justify your spiritual deviation, or are you ready to align your life with the 'plumb line' of Christ's unavoidable standards?"
+    id: 'oct-04',
+    question: "In the face of convincing and perhaps deceptive religious theories, are you asking for the wisdom of the Holy Spirit to guide your understanding of eternal truths?"
+    id: 'oct-05',
+    question: "Are your daily routines becoming the 'grave' of your ambitions due to negative thinking, or are you allowing a living faith to produce positive and creative thoughts?"
+    id: 'oct-06',
+    question: "Do you only know 'of' Jesus as a historical figure, or are you developing a personal relationship that will sustain you when things go horribly wrong?"
+    id: 'oct-07',
+    question: "Is your life drifting aimlessly because you've lost the sparkle of your spiritual experience, or are you daring to trust God unconditionally with your future?"
+    id: 'oct-08',
+    question: "When corrupt people seem to prosper while you struggle, will you maintain your course and remember that your ultimate reward comes from the God who sees every hidden deed?"
+    id: 'oct-09',
+    question: "Are you paying the spiritual price of being 'active' seven days a week, or are you accepting God's gift of the Sabbath as a necessary day for rest and contemplation?"
+    id: 'oct-10',
+    question: "Is your faith a 'demonstrative' high that crashes during times of failure, or is it a dynamic, steady devotion that remains obedient to God even when your emotions are low?"
+    id: 'oct-11',
+    question: "Is your love for others limited to empty words and sentimentality, or are you willing to make the patient, understanding sacrifices that mirror Christ’s love for you?"
+    id: 'oct-12',
+    question: "Are you disparaging yourself so often that you’ve begun to believe your own negative words, or are you imprinting the 'strong and courageous' promises of Scripture on your mind?"
+    id: 'oct-13',
+    question: "Are you standing upon your dignity and maintaining a 'cool aloofness' from others, or are you following the humble example of the Master into every walk of life?"
+    id: 'oct-14',
+    question: "When God seems silent in your dark valleys, do you view yourself as a spiritual failure, or do you understand that He is just as close then as He was on the mountaintop?"
+    id: 'oct-15',
+    question: "When your own resourcefulness fails and the outlook becomes desperate, do you underestimate God’s scope for transformation, or do you turn to His eternal love for help?"
+    id: 'oct-16',
+    question: "Has your religion become a set of dogmatic rules that lack inspiration, or are you allowing the Holy Spirit to breathe vital, intensely personal meaning into your faith?"
+    id: 'oct-17',
+    question: "Are you constantly losing the inner battle with your 'baser nature,' or have you completely surrendered control to Christ to achieve a unified and triumphant personality?"
+    id: 'oct-18',
+    question: "Are you tempted to compromise your principles in response to an unjust world, or are you seeking the Holy Spirit's power to stand firm on God’s eternal standards?"
+    id: 'oct-19',
+    question: "Are you becoming a 'spiritual drifter' because of a restless hunger for peace, or have you unconditionally accepted the gift of Jesus to appease your soul's yearning?"
+    id: 'oct-20',
+    question: "Do you perceive Christianity as a weak, isolated existence, or are you following the firm, courageous, and loving example of Jesus into the realities of life?"
+    id: 'oct-21',
+    question: "Are you allowing a difficult person to destroy your spiritual peace through hate, or are you destroying that bitterness by praying for them and doing them as much good as possible?"
+    id: 'oct-22',
+    question: "Is the grim outlook for the future making you give up hope, or are you trusting in the Friend who promised to never forsake or abandon you in your moments of distress?"
+    id: 'oct-23',
+    question: "Have you unknowingly created an idol out of wealth, status, or an addiction, and are you ready to choose the life-giving abundance that only the true God can offer?"
+    id: 'oct-24',
+    question: "Is your honesty bordering on brutality, or are your words inspired by the Holy Spirit and spoken at the right time with sincere Christian love?"
+    id: 'oct-25',
+    question: "Are you calculationg the cost of your affection, or is your love a deep, unselfish force that demonstrates itself through practical action and unwavering loyalty?"
+    id: 'oct-26',
+    question: "Are you embarking on ventures without asking where God fits into your planning, or have you made Jesus your trustworthy Partner and Leader in everything you undertake?"
+    id: 'oct-27',
+    question: "Are you toiling at good works to 'become' like Jesus, or are you allowing the presence of the living Christ in your heart to be the Source that naturally reveals His personality?"
+    id: 'oct-28',
+    question: "Do you have the courage to stand in the 'bright light' of God’s holiness and be honest about your hidden shortcomings, trusting that His grace can still make you a new creation?"
+    id: 'oct-29',
+    question: "Are you judging people based on a brief, superficial encounter, or are you asking the Master for His gift of perception to see the hidden person as God see them?"
+    id: 'oct-30',
+    question: "Has your faith become a dismal and depressing burden, or is it a dynamic, life-giving force that enriches your personality and glorifies God before others?"
+    id: 'oct-31',
+    question: "Do you feel public prayer is an 'uneasy' taboo, or do you recognize prayer as the most natural conversation between a child and their heavenly Father, regardless of the setting?"
+    id: 'nov-intro',
+    id: 'nov-1',
+    question: "In the midst of today's challenges, what specific worries do you need to surrender to experience God's perfect peace?"
+    id: 'nov-2',
+    question: "Can you identify the \"shadow\" of fear in your life today, and will you ask the Holy Spirit to help you overcome it?"
+    id: 'nov-3',
+    question: "Is the love of Christ visible in how you treat those who differ from you dogmatically or personally?"
+    id: 'nov-4',
+    question: "Who in your life today could benefit from a heartening word or a simple act of encouragement?"
+    id: 'nov-5',
+    question: "The Master is alive and active today; how have you seen His miracle-working power in your own life recently?"
+    id: 'nov-6',
+    question: "Is there a plan you are rushing into right now? Will you pause to seek God's timing and wait for His peace before proceeding?"
+    id: 'nov-7',
+    question: "Do you see your walk with Christ as a heavy burden or as a source of increasing joy? How can you deepen your personal conversation with Him today?"
+    id: 'nov-8',
+    question: "Are there any 'blinkers' of prejudice limiting your love for certain groups or individuals today? How can the Holy Spirit help you broaden your perspective?"
+    id: 'nov-9',
+    question: "If you are feeling dejected or confused, will you specifically invite the presence of the resurrected Christ into your situation right now?"
+    id: 'nov-10',
+    question: "Where do you find yourself tempted to trust 'poor advice' instead of unconditionally trusting Christ's guidance through your current crisis?"
+    id: 'nov-11',
+    question: "Is there a relationship in your life where division remains, and are you willing to let Christ's love bridge the gap today?"
+    id: 'nov-12',
+    question: "Are you retaining an unforgiving attitude while trying to maintain 'enthusiastic' worship, or will you accept that true reconciliation is more important than religious formula?"
+    id: 'nov-13',
+    question: "Are you 'frank' and 'truthful' without considering the wounds your words cause, or are you living in harmony with the Holy Spirit so that your speech always conveys love and truth?"
+    id: 'nov-14',
+    question: "Is your frantic, morning-to-night activity just an escape from your true responsibilities, or are you making time to plan your life in a constructive partnership with God?"
+    id: 'nov-15',
+    question: "Are you engaging in 'pious' slander that undermines the very faith you profess, or are you asking the Holy Spirit to help you speak with the love and kindness of Christ?"
+    id: 'nov-16',
+    question: "Are you determinig your spiritual quality by comparing yourself to others, or are you striving to be so filled with Christ that you lose all awareness of your own 'self'?"
+    id: 'nov-17',
+    question: "Is your love for Christ beginning to wane due to a lack of prayer and contemplation, or are you treasuring your relationship with Him as your single biggest spiritual asset?"
+    id: 'nov-18',
+    question: "Are you more interested in winning religious arguments with theological terms, or is your testimony rooted in the profound conviction of knowing Christ as your personal Savior?"
+    id: 'nov-19',
+    question: "Are you allowing world conditions or changing circumstances to dictate your domestic and spiritual decisions, or are you living according to God’s perfect will for your life?"
+    id: 'nov-20',
+    question: "Is your face revealing a spirit of bitterness and depression, or are you spending enough time with God that His radiance naturally shines through your words and deeds?"
+    id: 'nov-21',
+    question: "Is the accumulation of wealth becoming the driving force of your life, or are you constantly reminding yourself that the most valuable assets—like peaceful sleep and heaven—are free gifts?"
+    id: 'nov-22',
+    question: "Is your prayer life an escape mechanism from reality, or are you using it to open yourself to the Holy Spirit's guidance so you can become an active partner in God’s work?"
+    id: 'nov-23',
+    question: "Are you caught in agonizing hours of psychological self-examination, or have you discovered that by getting to know Jesus Christ more intimately, you also get to know your true self?"
+    id: 'nov-24',
+    question: "Are you ignoring the minor gestures that lead to destructive habits, or are you asking the Holy Spirit for the perception to say 'No!' at the very first indication of evil?"
+    id: 'nov-25',
+    question: "Are you content with merely intending to do good, or are you transforming your faith into positive action by applying the principles of the gospel to each aspect of your life?"
+    id: 'nov-26',
+    question: "Are you avoiding the 'painful' aspects of spiritual discipline, or are you subjecting your thoughts and prayers to Christ's authority to achieve a more profound level of maturity?"
+    id: 'nov-27',
+    question: "Is a past slight or shattered dream poisoning your spirit with bitterness, or are you surrendering that frustration to Jesus and allowing His love to provide the only true healing?"
+    id: 'nov-28',
+    question: "Are you struggling to produce 'good' behavior through human effort, or are you allowing the Holy Spirit to naturally transform your character into a garden of love, joy, and peace?"
+    id: 'nov-29',
+    question: "Are you reserving parts of your life for yourself, or are you offering your thoughts, words, and resources as a 'living sacrifice' that is available for whatever God wants to do?"
+    id: 'nov-30',
+    question: "As you look back on the past month, can you see how God’s grace was sufficient for your struggles, and will you face the new month with confidence in His perfect timing?"
+    id: 'dec-intro',
+    id: 'dec-1',
+    id: 'dec-2',
+    id: 'dec-3',
+    id: 'dec-4',
+    id: 'dec-5',
+    id: 'dec-6',
+    id: 'dec-7',
+    id: 'dec-8',
+    id: 'dec-9',
+    id: 'dec-10',
+    id: 'dec-11',
+    id: 'dec-12',
+    id: 'dec-13',
+    id: 'dec-14',
+    id: 'dec-15',
+    id: 'dec-16',
+    id: 'dec-17',
+    id: 'dec-18',
+    id: 'dec-19',
+    id: 'dec-20',
+    id: 'dec-21',
+    id: 'dec-22',
+    id: 'dec-23',
+    id: 'dec-24',
+    id: 'dec-25',
+    id: 'dec-26',
+    id: 'dec-27',
+      "As the Christmas festivities begin to wind down, we are left with a question: How will we follow Him now? The call of Jesus is a call to a new way of living, a new way of loving, and a new way of seeing the world. It is a call to leave behind our old ways and embark on a life of discipleship.",
+    id: 'dec-28',
+    id: 'dec-29',
+    id: 'dec-30',
+    id: 'dec-31',

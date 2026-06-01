@@ -1,0 +1,126 @@
+    id: 'jun-prayer',
+    month: 'JUNE',
+    title: 'JUNE PRAYER',
+    id: 'jun-1',
+    month: 'JUNE',
+    title: 'WHEN YOU PRAY',
+    question: "When God answers your prayers, do you remember to 'come back' with a heart full of audible praise and gratitude, or do you take His blessings for granted?"
+    id: 'jun-2',
+    month: 'JUNE',
+    title: 'CAN YOU COPE WITH CHANGE?',
+    question: "In the midst of an ever-changing world, are you anchoring your soul to the unchangeable nature of God, who remains your rock and fortress?"
+    id: 'jun-3',
+    month: 'JUNE',
+    title: 'SLOW DOWN',
+    question: "Are you making the mistake of being too busy FOR God to be with Him, or will you choose the 'more excellent way' of quietness and prayer?"
+    id: 'jun-4',
+    month: 'JUNE',
+    title: 'THE REDUCTION OF GOD’S WORD',
+    question: "Are you accepting the full counsel of Scripture, including the disciplines of the Old Testament that provide the blueprint for Christian love?"
+    id: 'jun-5',
+    month: 'JUNE',
+    title: 'LOOK AROUND YOU',
+    question: "Are you restricting your search for Jesus to holy places, or are you expecting to encounter Him in the simple, everyday tasks of your ordinary life?"
+    id: 'jun-6',
+    month: 'JUNE',
+    title: 'BE PATIENT AND SYMPATHETIC',
+    question: "Will you persevere in showing patient, Christ-like love to those struggling with doubt, rather than abandoning them to their despondency?"
+    id: 'jun-7',
+    month: 'JUNE',
+    title: 'MANAGE ANGER CAREFULLY',
+    question: "Is your anger a destructive, self-centered fire, or are you allowing the Holy Spirit to channel your emotions into a righteous power for good?"
+    id: 'jun-8',
+    month: 'JUNE',
+    title: 'LIVE IN THE FATHER’S LOVE',
+    question: "Are you living as a slave to fear and guilt, or are you walking as a cherished child who confidently calls the Almighty God 'Abba, Father'?"
+    id: 'jun-9',
+    month: 'JUNE',
+    title: 'TALK THINGS THROUGH WITH THE MASTER',
+    question: "Beyond scheduled rituals, are you maintaining a continuous, open conversation with God about every burden and joy you encounter today?"
+    id: 'jun-10',
+    month: 'JUNE',
+    title: 'FAITH REQUIRES TRUST',
+    question: "Like the disciples at the lake, are you willing to risk appearing foolish by obeying Jesus' instructions even when they contradict your expertise?"
+    id: 'jun-11',
+    month: 'JUNE',
+    title: 'THE SIMPLICITY OF JESUS CHRIST',
+    question: "Have you allowed complex dogmas to obscure the holy simplicity of Jesus' primary command: to love God and your neighbor unconditionally?"
+    id: 'jun-12',
+    month: 'JUNE',
+    title: 'USE TRIBULATIONS TO YOUR ADVANTAGE',
+    question: "Instead of surrendering to despair, will you accept your current trials as a divine discipline intended to develop your spiritual endurance?"
+    id: 'jun-13',
+    month: 'JUNE',
+    title: 'GOD IS IN CONTROL',
+    question: "When the future appears dark and unstable, do you find security in the knowledge that the One who holds the universe together also holds your life?"
+    id: 'jun-14',
+    month: 'JUNE',
+    title: 'CULTIVATE TIME FOR WAITING',
+    question: "Will you commit to the difficult but rewarding art of waiting for the Lord, allowing His Spirit to subdue your wandering thoughts and renew your strength?"
+    id: 'jun-15',
+    month: 'JUNE',
+    title: 'WITH WHOM DO YOU IDENTIFY?',
+    question: "In the midst of your busy life, do you take time to contemplate the absolute greatness of the One who created and sustains every star in the universe?"
+    id: 'jun-16',
+    month: 'JUNE',
+    title: 'RESIST THE TEMPTATION',
+    question: "Since Christ holds the keys to life and death, will you release your paralyzing fear of the unknown and trust His sovereign plan for your transition to eternity?"
+    id: 'jun-17',
+    month: 'JUNE',
+    title: 'AVOID LIMITED KNOWLEDGE',
+    question: "Do you have a closed mind that limits God's work, or are you secure enough in your faith to explore other channels of truth that broaden your spiritual perspective?"
+    id: 'jun-18',
+    month: 'JUNE',
+    title: 'BEYOND THE SCRIPTURES',
+    question: "In a world that thrives on criticism, will you choose to be the one voice that provides the genuine encouragement and spiritual support that others so desperately need?"
+    id: 'jun-19',
+    month: 'JUNE',
+    title: 'BE PRODUCTIVE',
+    question: "Is your joy dependent on your own physical strength and accomplishments, or are you secure in the fact that God delights in your simple hope and trust in Him?"
+    id: 'jun-20',
+    month: 'JUNE',
+    title: 'SELF-RESPECT THROUGH DEDICATION',
+    question: "Beyond eloquent words and religious theories, is your life a practical demonstration of the unselfish love that proves you have truly passed from death to life?"
+    id: 'jun-21',
+    month: 'JUNE',
+    title: 'GOD AND HIS MESSENGERS',
+    question: "Are you treating prayer as an occasional emergency exit, or as the constant, vital lifeline that invites God's heavenly resources into your daily struggles?"
+    id: 'jun-22',
+    month: 'JUNE',
+    title: 'DEATH BRINGS HOPE',
+    question: "Are you allowing the 'greater One' living within you to sensitize your spirit to truth and protect you from the deceptive influences of the world?"
+    id: 'jun-23',
+    month: 'JUNE',
+    title: 'SO MUCH DEPENDS ON YOU',
+    question: "Are you polluting your mind with the negative news and gossip of the day, or are you intentionally dwelling on the noble and praiseworthy things that God provides?"
+    id: 'jun-24',
+    month: 'JUNE',
+    title: 'BE POSITIVE',
+    question: "Like Martha, are you so distracted by the 'many things' of service that you have forgotten the 'one thing' that is truly important—sitting at the feet of Jesus?"
+    id: 'jun-25',
+    month: 'JUNE',
+    title: 'ARE YOU A CHRISTIAN?',
+    question: "When the noise of life becomes overwhelming, will you allow the Good Shepherd to lead you to the quiet waters of His presence where your soul can be restored?"
+    id: 'jun-26',
+    month: 'JUNE',
+    title: 'DO NOT RESIST AUTHORITY',
+    question: "Are you still trying to carry the heavy weight of your worries, or have you truly 'cast' them onto the shoulders of the One who cares for you and understands your needs?"
+    id: 'jun-27',
+    month: 'JUNE',
+    title: 'THE VALUE OF MEMORIES',
+    question: "Do you recognize the face of Christ in the poor, the sick, and the stranger, and are you responding with the same compassion you would show to the Master Himself?"
+    id: 'jun-28',
+    month: 'JUNE',
+    title: 'WHAT MAKES A CHRISTIAN DIFFERENT?',
+    question: "Is the primary filter of your decisions the question, 'Does this action bring glory to God,' or is it more often focused on your own personal benefit?"
+    id: 'jun-29',
+    month: 'JUNE',
+    title: 'GOD WILL SHOW YOU THE WAY',
+    question: "Can you maintain a spirit of joy even when your faith is being refined in the furnace of affliction, knowing that the outcome is of eternal value?"
+    id: 'jun-30',
+    month: 'JUNE',
+    title: 'THE FRIENDSHIP OF JESUS',
+    question: "Are you consulting God’s Word only for the big decisions, or are you allowing it to be the practical lamp that guides your very next step in the darkness?"
+    id: 'jul-prayer',
+    month: 'JULY',
+    title: 'JULY PRAYER',

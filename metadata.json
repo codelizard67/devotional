@@ -1,0 +1,8 @@
+{
+  "name": "Olive Branch Ministries Devotional",
+  "description": "Daily devotional, scripture, and reflections from Olive Branch Ministries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

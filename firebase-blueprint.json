@@ -1,0 +1,71 @@
+{
+  "entities": {
+    "userProfile": {
+      "title": "User Profile",
+      "description": "Stores user preferences and registration info",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "invitationCode": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "note": {
+      "title": "Devotional Note",
+      "description": "A personal reflection on a specific devotion",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "devotionId": { "type": "string" },
+        "content": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "devotionId", "content"]
+    },
+    "bookmark": {
+      "title": "Bookmark",
+      "description": "A saved devotional page",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "devotionId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "devotionId"]
+    },
+    "highlight": {
+      "title": "Highlight",
+      "description": "A highlighted snippet of text in a devotion",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "devotionId": { "type": "string" },
+        "text": { "type": "string" },
+        "paragraphIndex": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "devotionId", "text"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "userProfile",
+      "description": "User profile document"
+    },
+    "/users/{userId}/notes/{noteId}": {
+      "schema": "note",
+      "description": "Collection of personal notes"
+    },
+    "/users/{userId}/bookmarks/{bookmarkId}": {
+      "schema": "bookmark",
+      "description": "Collection of saved devotions"
+    },
+    "/users/{userId}/highlights/{highlightId}": {
+      "schema": "highlight",
+      "description": "Collection of text highlights"
+    }
+  }
+}

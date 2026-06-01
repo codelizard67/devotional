@@ -1,0 +1,112 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 0. Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && 
+             (request.auth.token.email == "joshua@digitalarkitects.com" || 
+              request.auth.token.email == "liona.stansell@gmail.com" || 
+              request.auth.token.email == "itsallieboyd@gmail.com") &&
+             request.auth.token.email_verified == true;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // 1. User Profiles
+    match /users/{userId} {
+      function isValidUserProfile(data) {
+        return data.keys().hasAll(['uid', 'email', 'invitationCode', 'createdAt']) &&
+               data.uid == request.auth.uid &&
+               data.email is string && data.email.size() <= 200 &&
+               (data.displayName == null || (data.displayName is string && data.displayName.size() <= 100)) &&
+               data.invitationCode is string && data.invitationCode.size() <= 50 &&
+               data.createdAt == request.time;
+      }
+
+      allow list: if isAdmin();
+      allow get: if isOwner(userId) || isAdmin();
+      allow create: if isOwner(userId) && isValidUserProfile(incoming());
+      // Profiles are mostly immutable for this simple app
+      allow update: if isOwner(userId) && isValidUserProfile(incoming()) && (
+        incoming().diff(existing()).affectedKeys().hasOnly(['displayName'])
+      );
+      
+      // 2. Notes
+      match /notes/{noteId} {
+        function isValidNote(data) {
+          return data.keys().hasAll(['userId', 'devotionId', 'content', 'updatedAt']) &&
+                 data.keys().size() == 4 &&
+                 data.userId == request.auth.uid &&
+                 data.devotionId is string && data.devotionId.size() <= 50 &&
+                 data.content is string && data.content.size() <= 10000 &&
+                 data.updatedAt == request.time;
+        }
+
+        allow list: if isOwner(userId);
+        allow get: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(noteId) && isValidNote(incoming());
+        allow update: if isOwner(userId) && isValidId(noteId) && isValidNote(incoming()) && (
+          incoming().diff(existing()).affectedKeys().hasOnly(['content', 'updatedAt'])
+        );
+        allow delete: if isOwner(userId);
+      }
+
+      // 3. Bookmarks
+      match /bookmarks/{bookmarkId} {
+        function isValidBookmark(data) {
+          return data.keys().hasAll(['userId', 'devotionId', 'createdAt']) &&
+                 data.keys().size() == 3 &&
+                 data.userId == request.auth.uid &&
+                 data.devotionId is string && data.devotionId.size() <= 50 &&
+                 data.createdAt == request.time;
+        }
+
+        allow list: if isOwner(userId);
+        allow get: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(bookmarkId) && isValidBookmark(incoming());
+        allow delete: if isOwner(userId);
+      }
+
+      // 4. Highlights
+      match /highlights/{highlightId} {
+        function isValidHighlight(data) {
+          return data.keys().hasAll(['userId', 'devotionId', 'text', 'paragraphIndex', 'createdAt']) &&
+                 data.keys().size() == 5 &&
+                 data.userId == request.auth.uid &&
+                 data.devotionId is string && data.devotionId.size() <= 100 &&
+                 data.text is string && data.text.size() <= 2000 &&
+                 data.paragraphIndex is int &&
+                 data.createdAt == request.time;
+        }
+
+        allow list: if isOwner(userId);
+        allow get: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(highlightId) && isValidHighlight(incoming());
+        allow delete: if isOwner(userId);
+      }
+    }
+  }
+}
