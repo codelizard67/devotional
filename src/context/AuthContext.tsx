@@ -1,22 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { 
-  User, 
-  onAuthStateChanged, 
-  signInWithPopup, 
-  signInWithRedirect,
-  getRedirectResult,
-  GoogleAuthProvider,
-  signOut,
-  setPersistence,
-  browserLocalPersistence
-} from 'firebase/auth';
-import { 
-  doc, 
-  getDoc, 
-  setDoc, 
-  serverTimestamp 
-} from 'firebase/firestore';
-import { auth, db } from '../lib/firebase';
+import { User } from '@supabase/supabase-js';
+import { supabase } from '../lib/firebase';
 import { INVITATION_CODES } from '../constants/auth';
 
 interface AuthContextType {
@@ -54,10 +38,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const fetchProfile = async (currentUser: User) => {
     try {
-      const docRef = doc(db, 'users', currentUser.uid);
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        const data = docSnap.data();
+      const { data, error: err } = await supabase
+        .from('users')
+        .select('*')
+        .eq('id', currentUser.id)
+        .single();
+      
+      if (err && err.code !== 'PGRST116') {
+        throw err;
+      }
+
+      if (data) {
         setProfile(data);
         localStorage.setItem('obm_profile_cache', JSON.stringify(data));
         return data;
@@ -73,71 +64,70 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
-    setPersistence(auth, browserLocalPersistence).catch(err => {
-      console.error("Persistence setup failed:", err);
-    });
-
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      const currentUser = session?.user || null;
       console.log("Auth State Changed:", currentUser ? `User: ${currentUser.email}` : "No User");
       setUser(currentUser);
       setIsAuthReady(true);
       
       if (currentUser) {
-        // Fetch in background, profile might already be set from cache
-        fetchProfile(currentUser).finally(() => {
-          setLoading(false);
-        });
+        await fetchProfile(currentUser);
+        setLoading(false);
       } else {
         setProfile(null);
         setLoading(false);
       }
     });
 
-    return () => unsubscribe();
+    return () => {
+      subscription?.unsubscribe();
+    };
   }, []);
 
   const signIn = async () => {
     setError(null);
-    const provider = new GoogleAuthProvider();
-    provider.setCustomParameters({ prompt: 'select_account' });
-    
     try {
-      console.log("Initiating Popup Auth...");
-      const result = await signInWithPopup(auth, provider);
-      if (result.user) {
-        await fetchProfile(result.user);
+      console.log("Initiating Google OAuth...");
+      const { error: err } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin,
+        },
+      });
+      if (err) {
+        throw err;
       }
     } catch (err: any) {
       console.error("Auth Failure:", err);
-      if (err.code === 'auth/popup-blocked') {
-        setError("Popups are blocked. Please allow popups for this site to sign in.");
-      } else if (err.code === 'auth/unauthorized-domain') {
-        setError("This domain is not authorized in Firebase Console. Please add your custom domain to the 'Authorized Domains' list.");
-      } else {
-        // Fallback for mobile environments where popup might fail
-        try {
-          console.log("Popup failed, trying redirect fallback...");
-          await signInWithRedirect(auth, provider);
-        } catch (redirErr: any) {
-          setError(redirErr.message || "Authentication failed. Please try again.");
-        }
-      }
+      setError(err.message || "Authentication failed. Please try again.");
     }
   };
 
   const registerWithCode = async (code: string) => {
     if (!user) return false;
     if (INVITATION_CODES.includes(code.toUpperCase().trim())) {
-      const profileData = {
-        uid: user.uid,
-        email: user.email,
-        displayName: user.displayName || user.email?.split('@')[0] || 'Member',
-        invitationCode: code.toUpperCase().trim(),
-        createdAt: serverTimestamp(),
-      };
-      await setDoc(doc(db, 'users', user.uid), profileData);
-      setProfile(profileData);
-      return true;
+      try {
+        const profileData = {
+          id: user.id,
+          email: user.email,
+          display_name: user.user_metadata?.name || user.email?.split('@')[0] || 'Member',
+          invitation_code: code.toUpperCase().trim(),
+          created_at: new Date().toISOString(),
+        };
+        
+        const { error: err } = await supabase
+          .from('users')
+          .upsert([profileData], { onConflict: 'id' });
+        
+        if (err) throw err;
+        
+        setProfile(profileData);
+        localStorage.setItem('obm_profile_cache', JSON.stringify(profileData));
+        return true;
+      } catch (err: any) {
+        console.error("Registration error:", err);
+        return false;
+      }
     }
     return false;
   };
@@ -151,10 +141,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const logout = async () => {
-    localStorage.removeItem('obm_profile_cache');
-    await signOut(auth);
-    setUser(null);
-    setProfile(null);
+    try {
+      localStorage.removeItem('obm_profile_cache');
+      await supabase.auth.signOut();
+      setUser(null);
+      setProfile(null);
+    } catch (err: any) {
+      console.error("Logout error:", err);
+    }
   };
 
   return (
