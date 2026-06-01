@@ -9,7 +9,7 @@ interface AuthContextType {
   loading: boolean;
   signInWithGoogle: () => Promise<void>;
   signInWithEmail: (email: string, password: string) => Promise<void>;
-  signUpWithEmail: (email: string, password: string) => Promise<void>;
+  signUpWithEmail: (email: string, password: string) => Promise<{ needsConfirmation: boolean }>;
   registerWithCode: (code: string) => Promise<boolean>;
   logout: () => Promise<void>;
   authError: string | null;
@@ -159,7 +159,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signUpWithEmail = async (email: string, password: string) => {
     setError(null);
     try {
-      const { error: err } = await supabase.auth.signUp({
+      const { data, error: err } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -167,9 +167,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
       if (err) throw err;
+      return { needsConfirmation: !data.session };
     } catch (err: any) {
       console.error("Email sign-up failure:", err);
       setError(err.message || "Sign up failed. Please try again.");
+      return { needsConfirmation: false };
     }
   };
 

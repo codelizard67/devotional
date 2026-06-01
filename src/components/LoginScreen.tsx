@@ -14,6 +14,7 @@ export default function LoginScreen() {
   const [showTroubleshooting, setShowTroubleshooting] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [status, setStatus] = useState('');
 
   const handleGoogle = async () => {
     setError('');
@@ -33,8 +34,12 @@ export default function LoginScreen() {
   const handleEmailSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setStatus('');
     setIsSubmitting(true);
-    await signUpWithEmail(email, password);
+    const result = await signUpWithEmail(email, password);
+    if (result.needsConfirmation) {
+      setStatus('Account created. If email confirmation is enabled, check your inbox, then sign in.');
+    }
     setIsSubmitting(false);
   };
 
@@ -126,6 +131,11 @@ export default function LoginScreen() {
                       <p className="text-stone-600 text-[11px] leading-relaxed">{authError}</p>
                     </div>
                   )}
+                  {status && (
+                    <div className="p-4 bg-olive/5 border border-olive/10 rounded-2xl text-left">
+                      <p className="text-olive text-[11px] leading-relaxed">{status}</p>
+                    </div>
+                  )}
 
                   <form onSubmit={handleEmailSignIn} className="space-y-3 text-left">
                     <div className="relative">
@@ -192,6 +202,11 @@ export default function LoginScreen() {
                         Auth Notice
                       </p>
                       <p className="text-stone-600 text-[11px] leading-relaxed">{authError}</p>
+                    </div>
+                  )}
+                  {status && (
+                    <div className="p-4 bg-olive/5 border border-olive/10 rounded-2xl text-left">
+                      <p className="text-olive text-[11px] leading-relaxed">{status}</p>
                     </div>
                   )}
 
