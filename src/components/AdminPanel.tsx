@@ -11,23 +11,22 @@ import {
   Download,
   Filter
 } from 'lucide-react';
-import { db } from '../lib/firebase';
-import { collection, query, onSnapshot, orderBy, Timestamp } from 'firebase/firestore';
+import { supabase } from '../lib/firebase';
 import { useAuth } from '../context/AuthContext';
 
 interface UserProfile {
-  uid: string;
+  id: string;
   email: string;
-  displayName: string;
-  invitationCode: string;
-  createdAt: Timestamp;
+  display_name: string;
+  invitation_code: string;
+  created_at: string;
 }
 
 export default function AdminPanel({ onClose }: { onClose: () => void }) {
   const [users, setUsers] = useState<UserProfile[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortField, setSortField] = useState<keyof UserProfile>('createdAt');
+  const [sortField, setSortField] = useState<keyof UserProfile>('created_at');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
 
   const ADMIN_EMAILS = [
@@ -37,21 +36,24 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
   ];
 
   useEffect(() => {
-    const q = query(collection(db, 'users'), orderBy('createdAt', 'desc'));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const usersData: UserProfile[] = [];
-      snapshot.forEach((doc) => {
-        const data = doc.data() as UserProfile;
-        // Filter out admins from the dashboard list
-        if (!ADMIN_EMAILS.includes(data.email?.toLowerCase())) {
-          usersData.push(data);
-        }
-      });
-      setUsers(usersData);
-      setLoading(false);
-    });
+    const loadUsers = async () => {
+      const { data, error } = await supabase
+        .from('users')
+        .select('*')
+        .order('created_at', { ascending: false });
 
-    return unsubscribe;
+      if (error) {
+        console.error('Error loading users:', error);
+      } else if (data) {
+        const usersData: UserProfile[] = data.filter(user => 
+          !ADMIN_EMAILS.includes(user.email?.toLowerCase())
+        );
+        setUsers(usersData);
+      }
+      setLoading(false);
+    };
+
+    loadUsers();
   }, []);
 
   const handleSort = (field: keyof UserProfile) => {
@@ -65,17 +67,17 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
 
   const filteredUsers = users
     .filter(user => 
-      user.displayName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      user.display_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       user.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      user.invitationCode?.toLowerCase().includes(searchTerm.toLowerCase())
+      user.invitation_code?.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .sort((a, b) => {
       let comparison = 0;
-      if (sortField === 'createdAt') {
-        comparison = (a.createdAt?.toMillis() || 0) - (b.createdAt?.toMillis() || 0);
+      if (sortField === 'created_at') {
+        comparison = new Date(a.created_at || '').getTime() - new Date(b.created_at || '').getTime();
       } else {
-        const valA = String(a[sortField] || '').toLowerCase();
-        const valB = String(b[sortField] || '').toLowerCase();
+        const valA = String(a[sortField as keyof UserProfile] || '').toLowerCase();
+        const valB = String(b[sortField as keyof UserProfile] || '').toLowerCase();
         comparison = valA.localeCompare(valB);
       }
       return sortOrder === 'asc' ? comparison : -comparison;
@@ -84,10 +86,10 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
   const exportCSV = () => {
     const headers = ['Name', 'Email', 'Code', 'Signup Date'];
     const rows = filteredUsers.map(user => [
-      user.displayName,
+      user.display_name,
       user.email,
-      user.invitationCode,
-      user.createdAt?.toDate().toLocaleString()
+      user.invitation_code,
+      new Date(user.created_at).toLocaleString()
     ]);
 
     const csvContent = "data:text/csv;charset=utf-8," 
@@ -158,7 +160,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
               {users.filter(u => {
                 const sevenDaysAgo = new Date();
                 sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-                return u.createdAt?.toMillis() > sevenDaysAgo.getTime();
+                return new Date(u.created_at).getTime() > sevenDaysAgo.getTime();
               }).length}
             </p>
           </div>
@@ -171,7 +173,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
               <h3 className="text-sm font-medium text-stone-500">Universal Code Users</h3>
             </div>
             <p className="text-3xl font-bold text-stone-900">
-              {users.filter(u => ['OBM-UNIVERSAL-2026', 'OBM-K8X2-P9R4'].includes(u.invitationCode)).length}
+              {users.filter(u => ['OBM-UNIVERSAL-2026', 'OBM-K8X2-P9R4'].includes(u.invitation_code)).length}
             </p>
           </div>
         </div>
@@ -198,7 +200,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
                 <tr className="bg-stone-50 border-b border-stone-200">
                   <th 
                     className="px-6 py-4 text-sm font-bold text-stone-600 cursor-pointer hover:text-hunter transition-colors"
-                    onClick={() => handleSort('displayName')}
+                    onClick={() => handleSort('display_name')}
                   >
                     <div className="flex items-center gap-2">
                       Member
@@ -216,7 +218,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
                   </th>
                   <th 
                     className="px-6 py-4 text-sm font-bold text-stone-600 cursor-pointer hover:text-hunter transition-colors"
-                    onClick={() => handleSort('invitationCode')}
+                    onClick={() => handleSort('invitation_code')}
                   >
                     <div className="flex items-center gap-2">
                       Access Code
@@ -225,7 +227,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
                   </th>
                   <th 
                     className="px-6 py-4 text-sm font-bold text-stone-600 cursor-pointer hover:text-hunter transition-colors"
-                    onClick={() => handleSort('createdAt')}
+                    onClick={() => handleSort('created_at')}
                   >
                     <div className="flex items-center gap-2">
                       Joined Date
@@ -249,15 +251,15 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
                   </tr>
                 ) : (
                   filteredUsers.map((member) => (
-                    <tr key={member.uid} className="hover:bg-stone-50/50 transition-colors">
+                    <tr key={member.id} className="hover:bg-stone-50/50 transition-colors">
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-hunter">
                             <UserIcon size={20} />
                           </div>
                           <div>
-                            <p className="font-bold text-stone-900">{member.displayName}</p>
-                            <p className="text-xs text-stone-400 font-mono uppercase tracking-tighter">ID: {member.uid.substring(0, 8)}...</p>
+                            <p className="font-bold text-stone-900">{member.display_name}</p>
+                            <p className="text-xs text-stone-400 font-mono uppercase tracking-tighter">ID: {member.id.substring(0, 8)}...</p>
                           </div>
                         </div>
                       </td>
@@ -269,18 +271,18 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
                       </td>
                       <td className="px-6 py-4">
                         <span className={`px-2.5 py-1 rounded-full text-xs font-bold tracking-tight ${
-                          ['OBM-UNIVERSAL-2026', 'OBM-K8X2-P9R4'].includes(member.invitationCode)
+                          ['OBM-UNIVERSAL-2026', 'OBM-K8X2-P9R4'].includes(member.invitation_code)
                             ? 'bg-purple-50 text-purple-600 border border-purple-100' 
                             : 'bg-stone-100 text-stone-600 border border-stone-200'
                         }`}>
-                          {member.invitationCode}
+                          {member.invitation_code}
                         </span>
                       </td>
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-2 text-stone-500">
                           <Calendar size={16} className="opacity-40" />
                           <span className="text-sm">
-                            {member.createdAt?.toDate().toLocaleDateString('en-US', { 
+                            {new Date(member.created_at).toLocaleDateString('en-US', { 
                               year: 'numeric', 
                               month: 'short', 
                               day: 'numeric' 

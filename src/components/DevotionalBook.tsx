@@ -27,17 +27,7 @@ import {
 } from 'lucide-react';
 import { devotions, Devotion } from '../data/devotions';
 import { useAuth } from '../context/AuthContext';
-import { db } from '../lib/firebase';
-import { 
-  collection, 
-  query, 
-  onSnapshot, 
-  doc, 
-  setDoc, 
-  deleteDoc, 
-  serverTimestamp 
-} from 'firebase/firestore';
-import { handleFirestoreError } from '../lib/errorHandlers';
+import { supabase } from '../lib/firebase';
 import BibleViewer from './BibleViewer';
 import AdminPanel from './AdminPanel';
 
@@ -221,71 +211,65 @@ export default function DevotionalBook() {
   const currentDevotion = devotions[currentPage];
   const activeColorCfg = HIGHLIGHT_COLORS.find(c => c.id === selectedColor) || HIGHLIGHT_COLORS[0];
 
-  // Sync state with Firestore
+  // Sync state with Supabase
   useEffect(() => {
     if (!user) return;
 
-    // Listen to bookmarks
-    const bookmarksQuery = query(collection(db, 'users', user.uid, 'bookmarks'));
-    const unsubscribeBookmarks = onSnapshot(bookmarksQuery, (snapshot) => {
-      const bMarks: string[] = [];
-      snapshot.forEach((doc) => bMarks.push(doc.data().devotionId));
-      setBookmarks(bMarks);
-      localStorage.setItem('obm_bookmarks_cache', JSON.stringify(bMarks));
-    }, (error) => handleFirestoreError(error, 'list', `users/${user.uid}/bookmarks`));
+    const loadData = async () => {
+      try {
+        // Load bookmarks
+        const { data: bookmarksData } = await supabase
+          .from('bookmarks')
+          .select('devotion_id')
+          .eq('user_id', user.id);
+        
+        if (bookmarksData) {
+          const bMarks = bookmarksData.map(b => b.devotion_id);
+          setBookmarks(bMarks);
+          localStorage.setItem('obm_bookmarks_cache', JSON.stringify(bMarks));
+        }
 
-    // Listen to notes
-    const notesQuery = query(collection(db, 'users', user.uid, 'notes'));
-    const unsubscribeNotes = onSnapshot(notesQuery, (snapshot) => {
-      const notes: Record<string, string> = {};
-      snapshot.forEach((doc) => {
-        const data = doc.data();
-        notes[data.devotionId] = data.content;
-      });
-      setUserNotes(notes);
-      localStorage.setItem('obm_notes_cache', JSON.stringify(notes));
-    }, (error) => handleFirestoreError(error, 'list', `users/${user.uid}/notes`));
+        // Load notes
+        const { data: notesData } = await supabase
+          .from('notes')
+          .select('devotion_id, content')
+          .eq('user_id', user.id);
+        
+        if (notesData) {
+          const notes: Record<string, string> = {};
+          notesData.forEach((note) => {
+            notes[note.devotion_id] = note.content;
+          });
+          setUserNotes(notes);
+          localStorage.setItem('obm_notes_cache', JSON.stringify(notes));
+        }
 
-    // Listen to highlights
-    const highlightsQuery = query(collection(db, 'users', user.uid, 'highlights'));
-    const unsubscribeHighlights = onSnapshot(highlightsQuery, (snapshot) => {
-      const h: Record<string, Array<{ text: string, id: string, paraIndex: number, color?: string, isOptimistic?: boolean }>> = {};
-      snapshot.forEach((docs) => {
-        const data = docs.data();
-        if (!h[data.devotionId]) h[data.devotionId] = [];
-        h[data.devotionId].push({ 
-          text: data.text, 
-          id: docs.id, 
-          paraIndex: data.paragraphIndex ?? -1,
-          color: data.color || 'yellow'
-        });
-      });
-      
-      setHighlights(prev => {
-        const merged = { ...h };
-        // Carry over any optimistic items that haven't appeared in the snapshot yet
-        Object.keys(prev).forEach(devId => {
-          const optimisticOnly = prev[devId].filter(item => item.isOptimistic);
-          if (optimisticOnly.length > 0) {
-            if (!merged[devId]) merged[devId] = [];
-            const existingIds = new Set(merged[devId].map(item => item.id));
-            optimisticOnly.forEach(opt => {
-              if (!existingIds.has(opt.id)) {
-                merged[devId].push(opt);
-              }
+        // Load highlights
+        const { data: highlightsData } = await supabase
+          .from('highlights')
+          .select('devotion_id, text, id, paragraph_index, color')
+          .eq('user_id', user.id);
+        
+        if (highlightsData) {
+          const h: Record<string, Array<{ text: string, id: string, paraIndex: number, color?: string }>> = {};
+          highlightsData.forEach((hl) => {
+            if (!h[hl.devotion_id]) h[hl.devotion_id] = [];
+            h[hl.devotion_id].push({
+              text: hl.text,
+              id: hl.id,
+              paraIndex: hl.paragraph_index ?? -1,
+              color: hl.color || 'yellow'
             });
-          }
-        });
-        localStorage.setItem('obm_highlights_cache', JSON.stringify(merged));
-        return merged;
-      });
-    }, (error) => handleFirestoreError(error, 'list', `users/${user.uid}/highlights`));
-
-    return () => {
-      unsubscribeBookmarks();
-      unsubscribeNotes();
-      unsubscribeHighlights();
+          });
+          setHighlights(h);
+          localStorage.setItem('obm_highlights_cache', JSON.stringify(h));
+        }
+      } catch (error) {
+        console.error('Error loading user data:', error);
+      }
     };
+
+    loadData();
   }, [user]);
 
   const toggleBookmark = async (id: string) => {
@@ -293,16 +277,21 @@ export default function DevotionalBook() {
     
     try {
       if (bookmarks.includes(id)) {
-        await deleteDoc(doc(db, 'users', user.uid, 'bookmarks', id));
+        await supabase
+          .from('bookmarks')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('devotion_id', id);
       } else {
-        await setDoc(doc(db, 'users', user.uid, 'bookmarks', id), {
-          userId: user.uid,
-          devotionId: id,
-          createdAt: serverTimestamp()
-        });
+        await supabase
+          .from('bookmarks')
+          .insert({
+            user_id: user.id,
+            devotion_id: id
+          });
       }
     } catch (error) {
-      handleFirestoreError(error, bookmarks.includes(id) ? 'delete' : 'create', `users/${user.uid}/bookmarks/${id}`);
+      console.error('Bookmark toggle error:', error);
     }
   };
 
@@ -313,14 +302,17 @@ export default function DevotionalBook() {
     setUserNotes(prev => ({ ...prev, [id]: note }));
     
     try {
-      await setDoc(doc(db, 'users', user.uid, 'notes', id), {
-        userId: user.uid,
-        devotionId: id,
-        content: note,
-        updatedAt: serverTimestamp()
-      });
+      await supabase
+        .from('notes')
+        .upsert({
+          user_id: user.id,
+          devotion_id: id,
+          content: note
+        }, {
+          onConflict: 'user_id,devotion_id'
+        });
     } catch (error) {
-      handleFirestoreError(error, 'write', `users/${user.uid}/notes/${id}`);
+      console.error('Note save error:', error);
     }
   };
 
@@ -340,21 +332,22 @@ export default function DevotionalBook() {
               text, 
               id: highlightId, 
               paraIndex, 
-              color: selectedColor,
-              isOptimistic: true // Marker for UI
+              color: selectedColor
             }]
         };
     });
 
     try {
-      await setDoc(doc(db, 'users', user.uid, 'highlights', highlightId), {
-        userId: user.uid,
-        devotionId,
-        text,
-        paragraphIndex: paraIndex,
-        color: selectedColor,
-        createdAt: serverTimestamp()
-      });
+      await supabase
+        .from('highlights')
+        .insert({
+          id: highlightId,
+          user_id: user.id,
+          devotion_id: devotionId,
+          text,
+          paragraph_index: paraIndex,
+          color: selectedColor
+        });
     } catch (error) {
       // Revert optimistic update on failure
       setHighlights(prev => {
@@ -364,16 +357,19 @@ export default function DevotionalBook() {
               [devotionId]: devotionH.filter(h => h.id !== highlightId)
           };
       });
-      handleFirestoreError(error, 'create', `users/${user.uid}/highlights/${highlightId}`);
+      console.error('Highlight creation error:', error);
     }
   };
 
   const handleRemoveHighlight = async (highlightId: string) => {
     if (!user) return;
     try {
-      await deleteDoc(doc(db, 'users', user.uid, 'highlights', highlightId));
+      await supabase
+        .from('highlights')
+        .delete()
+        .eq('id', highlightId);
     } catch (error) {
-      handleFirestoreError(error, 'delete', `users/${user.uid}/highlights/${highlightId}`);
+      console.error('Highlight delete error:', error);
     }
   };
 
