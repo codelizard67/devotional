@@ -19,7 +19,7 @@ const envVars = [
   },
   {
     key: 'VITE_SUPABASE_URL',
-    value: 'https://lhpoqyqnaahoietagmbr.supabase.co',
+    value: 'https://auth.olivebranchministries.online',
     type: 'plain',
     target: ['production', 'preview', 'development']
   },
