@@ -1,4 +1,4 @@
-# Olive Branch Ministries - Daily Devotional App
+# Olive Branch - Daily Devotional App
 
 A beautiful, interactive daily devotional web application built with React, Tailwind CSS, and Firebase.
 
@@ -11,7 +11,7 @@ A beautiful, interactive daily devotional web application built with React, Tail
 - **Journaling:** Add personal notes to any day's entry. Content is saved securely via Firebase.
 - **Bible Integration:** Integrated Bible viewer for deep-diving into scripture references.
 - **PDF Export:** Download the entire devotional series as a beautifully formatted PDF.
-- **User Authentication:** Secure login via Google Authentication.
+- **User Authentication:** Secure login via Google Authentication, branded as Olive Branch.
 
 ## Tech Stack
 

@@ -6,6 +6,18 @@ const projectId = process.env.VERCEL_PROJECT_ID || 'prj_msng9xi8ILZfNgTl3D6XXrS5
 
 const envVars = [
   {
+    key: 'VITE_APP_NAME',
+    value: 'Olive Branch',
+    type: 'plain',
+    target: ['production', 'preview', 'development']
+  },
+  {
+    key: 'VITE_APP_URL',
+    value: 'https://olivebranch.yourdomain.com',
+    type: 'plain',
+    target: ['production', 'preview', 'development']
+  },
+  {
     key: 'VITE_SUPABASE_URL',
     value: 'https://lhpoqyqnaahoietagmbr.supabase.co',
     type: 'plain',
